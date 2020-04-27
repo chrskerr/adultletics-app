@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/admin.adultletics.com.au/static/css/main.3e70da89.chunk.css",
-    "main.js": "/admin.adultletics.com.au/static/js/main.e8ea9bbc.chunk.js",
-    "main.js.map": "/admin.adultletics.com.au/static/js/main.e8ea9bbc.chunk.js.map",
-    "runtime-main.js": "/admin.adultletics.com.au/static/js/runtime-main.8bab453c.js",
-    "runtime-main.js.map": "/admin.adultletics.com.au/static/js/runtime-main.8bab453c.js.map",
-    "static/js/2.498d8691.chunk.js": "/admin.adultletics.com.au/static/js/2.498d8691.chunk.js",
-    "static/js/2.498d8691.chunk.js.map": "/admin.adultletics.com.au/static/js/2.498d8691.chunk.js.map",
-    "index.html": "/admin.adultletics.com.au/index.html",
-    "precache-manifest.7d2a8876170c51c8b2a2bda2dbf110e5.js": "/admin.adultletics.com.au/precache-manifest.7d2a8876170c51c8b2a2bda2dbf110e5.js",
-    "service-worker.js": "/admin.adultletics.com.au/service-worker.js",
-    "static/css/main.3e70da89.chunk.css.map": "/admin.adultletics.com.au/static/css/main.3e70da89.chunk.css.map",
-    "static/js/2.498d8691.chunk.js.LICENSE.txt": "/admin.adultletics.com.au/static/js/2.498d8691.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.3e70da89.chunk.css",
+    "main.js": "/static/js/main.142bdc21.chunk.js",
+    "main.js.map": "/static/js/main.142bdc21.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ec484b13.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ec484b13.js.map",
+    "static/js/2.498d8691.chunk.js": "/static/js/2.498d8691.chunk.js",
+    "static/js/2.498d8691.chunk.js.map": "/static/js/2.498d8691.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.244766375ca431c6aaf03944483acce1.js": "/precache-manifest.244766375ca431c6aaf03944483acce1.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.3e70da89.chunk.css.map": "/static/css/main.3e70da89.chunk.css.map",
+    "static/js/2.498d8691.chunk.js.LICENSE.txt": "/static/js/2.498d8691.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8bab453c.js",
+    "static/js/runtime-main.ec484b13.js",
     "static/js/2.498d8691.chunk.js",
     "static/css/main.3e70da89.chunk.css",
-    "static/js/main.e8ea9bbc.chunk.js"
+    "static/js/main.142bdc21.chunk.js"
   ]
 }
