@@ -88,7 +88,12 @@ export default function UpdateWeekDayWorkoutPanel ({ props }) {
 								<Pane marginBottom={ 48 }>
 									<SearchInput placeholder="Filter available workouts on title and type" width="100%" onChange={ e => setSearchTerms( e.target.value.split( " " )) }/>
 								</Pane>
-								<Pane marginBottom={ 32 }>
+								<Pane display="flex" justifyContent="space-between" marginBottom={ 32 }>
+									<Button type="submit" iconBefore={ isSubmitting ? "" : "tick"} isLoading={ isSubmitting } disabled={ !selectedWorkoutVersionId } onClick={ handleSubmit }>Add / Update Workout</Button>
+									<Button iconBefore={ isSubmitting ? "" : "cross"} intent="danger" isLoading={ isSubmitting } onClick={ _handleClearWorkout }>Clear Day</Button>
+									{ errors && <p>{ errors }</p>}
+								</Pane>
+								<Pane>
 									{ !_.isEmpty( filteredWorkouts ) && _.map( filteredWorkouts, workout => 
 										<SearchRow 
 											key={ workout.id } 
@@ -99,12 +104,6 @@ export default function UpdateWeekDayWorkoutPanel ({ props }) {
 										/>, 
 									)}
 								</Pane>
-								<Pane display="flex" justifyContent="space-between">
-									<Button type="submit" iconBefore={ isSubmitting ? "" : "tick"} isLoading={ isSubmitting } disabled={ !selectedWorkoutVersionId } onClick={ handleSubmit }>Add / Update Workout</Button>
-									<Button iconBefore={ isSubmitting ? "" : "cross"} intent="danger" isLoading={ isSubmitting } onClick={ _handleClearWorkout }>Clear Day</Button>
-									{ errors && <p>{ errors }</p>}
-								</Pane>
-
 							</form> 
 						</>
 					);
