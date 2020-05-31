@@ -48,7 +48,7 @@ export default function Firebase ({ children }) {
 			signIn: async ( email, password ) => await firebase.auth().signInWithEmailAndPassword( email, password ), 
 			signOut: () => firebase.auth().signOut(),
 		});
-        
+		
 		firebase.auth().onAuthStateChanged( async user => {
 			updateAuth({ isAuthenticating: true });
 			if ( user ) {

@@ -35,7 +35,7 @@ export default function Week ( props ) {
 	const workouts = _.compact( _.map( days, "workout" ));    
 	const stats = _.compact( _.map( days, "workout.stats" ));
 
-	const challenge = _.get( week, "daily_challenges.id", "" );
+	const challenge = _.get( week, "daily_challenge.id", "" );
 	const challenges = _.get( challengesData, "daily_challenges", []);
 	const challengeSelectOptions = _.map( challenges, ({ id, title }) => ({ value: id, label: title }));
 
