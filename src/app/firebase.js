@@ -35,10 +35,9 @@ export default function Firebase ({ children }) {
 			if ( uid && uid !== authUserUid ) {
 				const userRes = await apolloClient.query({ query: Queries.auth.getUser, variables: { uid }});
 				const authUser = _.get( userRes, "data.users_by_pk" );
-				updateAuth({ authUser });
+				updateAuth({ authUser, isAuthenticating: false });
 			} 
 			if ( !uid ) updateAuth({ authUser: {}});
-			updateAuth({ isAuthenticating: false });
 		})();
 	// eslint-disable-next-line
 	}, [ uid ]);
@@ -57,8 +56,7 @@ export default function Firebase ({ children }) {
 				const hasuraClaim = idTokenResult.claims[ "https://hasura.io/jwt/claims" ];
 				if ( hasuraClaim ) updateAuth({ token, uid: user.uid });
 			} else { 
-				updateAuth({ authUser: {}, token: null, uid: "" }); 
-				updateAuth({ isAuthenticating: false });
+				updateAuth({ authUser: {}, token: null, uid: "", isAuthenticating: false }); 
 			}
 		});
 	// eslint-disable-next-line
