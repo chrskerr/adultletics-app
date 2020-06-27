@@ -118,7 +118,7 @@ const WorkoutTypeChart = memo( function WorkoutPopularityChart ( props ) {
 			endLabelPadding={ 8 }
 		/>
 	);
-}, _.isEqual );
+});
 WorkoutTypeChart.propTypes = {
 	weeks: PropTypes.array,
 };
@@ -197,7 +197,7 @@ const WorkoutPopularityChart = memo( function WorkoutPopularityChart ( props ) {
 			endLabelPadding={ 8 }
 		/>
 	);
-}, _.isEqual );
+});
 WorkoutPopularityChart.propTypes = {
 	weeks: PropTypes.array,
 };
@@ -258,7 +258,7 @@ const EnergySystemsChart = memo( function EnergySystemsChart ( props ) {
 			},
 		]}
 	/>;
-}, _.isEqual );
+});
 EnergySystemsChart.propTypes = {
 	weeks: PropTypes.array,
 };
