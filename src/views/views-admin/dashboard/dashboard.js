@@ -28,7 +28,7 @@ export default function Dashboard () {
 			<Pane display="flex" marginBottom={ 48 }>
 				<Heading size={ 800 } color="#1070CA">Dashboard</Heading>
 			</Pane>
-			<Pane height={ 450 } elevation={ 1 } background="white" padding={ 24 } marginBottom={ 24 }>
+			<Pane height={ 850 } elevation={ 1 } background="white" padding={ 24 } marginBottom={ 24 }>
 				<Heading size={ 300 }>{ _.upperCase( "Workout popularity over time" ) }</Heading>
 				<WorkoutPopularityChart weeks={ weeks } />
 			</Pane>
