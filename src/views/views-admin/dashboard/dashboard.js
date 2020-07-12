@@ -9,7 +9,7 @@ import { parseISO } from "date-fns";
 import _ from "lodash";
 
 // app
-import { Pane, Heading } from "evergreen-ui";
+import { Pane, Heading, Text } from "evergreen-ui";
 import { Queries, constants, Loading } from "../index";
 
 //
@@ -28,8 +28,9 @@ export default function Dashboard () {
 			<Pane display="flex" marginBottom={ 48 }>
 				<Heading size={ 800 } color="#1070CA">Dashboard</Heading>
 			</Pane>
-			<Pane height={ 850 } elevation={ 1 } background="white" padding={ 24 } marginBottom={ 24 }>
+			<Pane height={ 650 } elevation={ 1 } background="white" padding={ 24 } marginBottom={ 24 }>
 				<Heading size={ 300 }>{ _.upperCase( "Workout popularity over time" ) }</Heading>
+				<Text>excluding strength & recovery workouts</Text>
 				<WorkoutPopularityChart weeks={ weeks } />
 			</Pane>
 			<Pane height={ 300 } elevation={ 1 } background="white" padding={ 24 } marginBottom={ 24 }>
@@ -46,7 +47,7 @@ export default function Dashboard () {
 
 
 
-const WorkoutTypeChart = memo( function WorkoutPopularityChart ( props ) {
+const WorkoutTypeChart = memo( function WorkoutTypeChart ( props ) {
 	const { weeks } = props;
 	const { workoutTypes } = constants;
 	const typeList = [];
@@ -140,7 +141,7 @@ const WorkoutPopularityChart = memo( function WorkoutPopularityChart ( props ) {
 			return _.reduce( _.get( curr, "days", []), ( total, curr ) => {
 				const title = _.get( curr, "workout.workout.title" );
 				const type = _.get( curr, "workout.workout.type" );
-				if ( !title || type === "recovery" ) return total;
+				if ( !title || type === "recovery" || type === "strength" ) return total;
 				if ( !workoutList.includes( title )) workoutList.push( title );
 				const value = _.get( total, [ "data", title ], 0 ) + ( 1 - (( 10 - i ) / 11 ));
 				return { ...total, data: { ...total.data, [ title ]: value }};
