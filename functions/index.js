@@ -37,7 +37,7 @@ exports.processSignUp = functions.auth.user().onCreate( async user => {
 		},
 	};
 
-	await admin.auth().setCustomUserClaims( user.uid, customClaims )
+	await admin.auth().setCustomUserClaims( uid, customClaims )
 		.then(() => {
 			const metadataRef = admin.database().ref( "metadata/" + uid );
 			return metadataRef.set({ refreshTime: new Date().getTime() });
