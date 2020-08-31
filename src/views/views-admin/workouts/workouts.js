@@ -23,7 +23,7 @@ export default function Workouts () {
 
 	if ( loading ) return <Loading />;
 
-	const filteredWorkouts = filter ? _.filter( workouts, ({ title }) => _.lowerCase( title ).indexOf( _.lowerCase( filter )) !== -1 ) : workouts; 
+	const filteredWorkouts = filter ? _.filter( workouts, ({ title }) => _.lowerCase( title ).includes( _.lowerCase( filter ))) : workouts; 
 
 	return (
 		<>
@@ -37,6 +37,7 @@ export default function Workouts () {
 				<TextInputField 
 					label="Filter by workout title" 
 					placeholder="Start typing here..." 
+					value={ filter }
 					onChange={ ({ target: { value }}) => setFilter( value ) }
 				/>
 			</Pane>
